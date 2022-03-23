@@ -2,6 +2,7 @@ package otus.homework.flowcats
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
+import kotlin.math.pow
 
 @ExperimentalCoroutinesApi
 class SampleInteractor(
@@ -19,7 +20,7 @@ class SampleInteractor(
      */
     fun task1(): Flow<String> {
         return sampleRepository.produceNumbers()
-            .map{it * 5}
+            .map{(it.toDouble().pow(5)).toInt()}
             .filter{it > 20 && it % 2 != 0}
             .map{ "$it won" }
             .take(3)

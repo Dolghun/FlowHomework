@@ -58,4 +58,7 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.39.1'
 
     implementation("androidx.fragment:fragment-ktx:1.4.1")
+
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.0-alpha04")
 }
